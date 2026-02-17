@@ -7,6 +7,11 @@ This allows multiple OutGauge apps to run at the same time.
 
 - Windows
 - .NET 8 SDK (for building from source)
+- .NET 8 Runtime (for the small framework-dependent release `.exe`)
+
+Runtime download:
+
+https://dotnet.microsoft.com/en-us/download/dotnet/8.0/runtime
 
 ## Setup
 
@@ -61,6 +66,18 @@ dotnet publish UdpForwarder -c Release -r win-x64 --self-contained true /p:Publi
 Output:
 
 `UdpForwarder/bin/Release/net8.0/win-x64/publish/UdpForwarder.exe`
+
+## Build a small EXE (framework-dependent)
+
+```powershell
+dotnet publish UdpForwarder -c Release -r win-x64 --self-contained false /p:PublishSingleFile=true
+```
+
+Output:
+
+`UdpForwarder/bin/Release/net8.0/win-x64/publish/UdpForwarder.exe`
+
+Note: This smaller `.exe` requires the .NET 8 Runtime installed on the target system.
 
 Run:
 
