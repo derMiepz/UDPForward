@@ -1,0 +1,19 @@
+{
+  "listenHost": "0.0.0.0",
+  "listenPort": 30000,
+  "statsIntervalSeconds": 5,
+  "targets": [
+    {
+      "name": "Dash app",
+      "host": "127.0.0.1",
+      "port": 31001,
+      "enabled": true
+    },
+    {
+      "name": "Telemetry app",
+      "host": "127.0.0.1",
+      "port": 31002,
+      "enabled": true
+    }
+  ]
+}
